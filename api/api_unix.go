@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 )
 
 // createSocketListener creates a Unix domain socket listener

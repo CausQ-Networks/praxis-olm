@@ -1,23 +1,23 @@
 # Olm
 
 > [!NOTE]
-> Olm is being phased out in favor of the [Pangolin CLI](https://github.com/fosrl/cli) and is only meant for advanced use cases.
+> Olm is being phased out in favor of the [Praxis CLI](https://github.com/CausQ-Networks/praxis-cli) and is only meant for advanced use cases.
 
-Olm is the cross-platform internal networking library built into every Pangolin client. It does the heavy-lifting of connecting the client to Pangolin sites.
+Olm is the cross-platform internal networking library built into every Praxis client. It does the heavy-lifting of connecting the client to Praxis sites.
 
-Don't use Olm as a standalone machine client. Instead, use the [Pangolin CLI](https://github.com/fosrl/cli).
+Don't use Olm as a standalone machine client. Instead, use the [Praxis CLI](https://github.com/CausQ-Networks/praxis-cli).
 
 ### Installation and Documentation
 
-Olm is used with Pangolin and Newt as part of the larger system. See documentation below:
+Olm is used with Praxis and Newt as part of the larger system. See documentation below:
 
--   [Full Documentation](https://docs.pangolin.net/manage/clients/understanding-clients)
+-   [Full Documentation](https://docs.praxis.causq.com/manage/clients/understanding-clients)
 
 ## Key Functions
 
-### Registers with Pangolin
+### Registers with Praxis
 
-Using the Olm ID and a secret, the olm will make HTTP requests to Pangolin to receive a session token. Using that token, it will connect to a websocket and maintain that connection. Control messages will be sent over the websocket.
+Using the Olm ID and a secret, the olm will make HTTP requests to Praxis to receive a session token. Using that token, it will connect to a websocket and maintain that connection. Control messages will be sent over the websocket.
 
 ### Receives WireGuard Control Messages
 

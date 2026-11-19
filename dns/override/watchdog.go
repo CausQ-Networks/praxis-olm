@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 )
 
 // WatchdogConfig configures the DNS override watchdog. The watchdog runs as

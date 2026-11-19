@@ -11,15 +11,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fosrl/newt/bind"
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/newt/network"
-	"github.com/fosrl/newt/util"
-	"github.com/fosrl/olm/api"
-	olmDevice "github.com/fosrl/olm/device"
-	"github.com/fosrl/olm/dns"
-	"github.com/fosrl/olm/peers/monitor"
-	"github.com/fosrl/olm/websocket"
+	"github.com/CausQ-Networks/praxis-newt/bind"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/network"
+	"github.com/CausQ-Networks/praxis-newt/util"
+	"github.com/CausQ-Networks/praxis-olm/api"
+	olmDevice "github.com/CausQ-Networks/praxis-olm/device"
+	"github.com/CausQ-Networks/praxis-olm/dns"
+	"github.com/CausQ-Networks/praxis-olm/peers/monitor"
+	"github.com/CausQ-Networks/praxis-olm/websocket"
 	"golang.zx2c4.com/wireguard/device"
 	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 )
@@ -122,7 +122,7 @@ type PeerManager struct {
 	// endpoints registered by callers outside the normal site-peer lifecycle -
 	// currently hole-punch exit node probing endpoints, a connected exit
 	// node's own WireGuard endpoint, upstream DNS servers, and the control-plane
-	// (Pangolin server) IPs the websocket dials (see olm's OnTokenUpdate and
+	// (Praxis server) IPs the websocket dials (see olm's OnTokenUpdate and
 	// OnDialTargets handlers and connectExitNode) - that must stay off the gateway route the same way a
 	// site peer's own endpoint does, so hole punching / the exit node
 	// connection still originates from the local network rather than looping
@@ -166,8 +166,8 @@ const (
 )
 
 // normalizeServerRouteDestination converts the bare IPv4 address returned by
-// Pangolin's site configuration into the host CIDR expected by Newt's route
-// helpers. Pangolin 1.21 returns values such as "100.90.128.4", while the
+// Praxis's site configuration into the host CIDR expected by Newt's route
+// helpers. Praxis 1.21 returns values such as "100.90.128.4", while the
 // Darwin route and NetworkSettings implementations require "100.90.128.4/32".
 // Preserve already-CIDR values and invalid values so the downstream helper can
 // report its normal validation error.

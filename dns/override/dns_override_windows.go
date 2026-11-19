@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"net/netip"
 
-	"github.com/fosrl/newt/logger"
-	platform "github.com/fosrl/olm/dns/platform"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	platform "github.com/CausQ-Networks/praxis-olm/dns/platform"
 )
 
 var configurator platform.DNSConfigurator

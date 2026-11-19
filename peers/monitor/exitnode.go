@@ -7,7 +7,7 @@ import (
 	"net/netip"
 	"time"
 
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 	"golang.org/x/net/icmp"
 	xipv4 "golang.org/x/net/ipv4"
 	"gvisor.dev/gvisor/pkg/tcpip"

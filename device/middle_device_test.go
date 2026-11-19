@@ -4,8 +4,8 @@ import (
 	"net/netip"
 	"testing"
 
-	"github.com/fosrl/newt/bind"
-	"github.com/fosrl/newt/util"
+	"github.com/CausQ-Networks/praxis-newt/bind"
+	"github.com/CausQ-Networks/praxis-newt/util"
 )
 
 // buildIPv4UDPPacket builds a minimal IPv4/UDP packet (no options) carrying payload.

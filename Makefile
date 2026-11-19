@@ -9,7 +9,7 @@ local:
 	CGO_ENABLED=0 go build -o ./bin/olm
 
 docker-build:
-	docker build -t fosrl/olm:latest .
+	docker build -t causq-networks/praxis-olm:latest .
 
 docker-build-release:
 	@if [ -z "$(tag)" ]; then \
@@ -18,15 +18,15 @@ docker-build-release:
 	fi
 	docker buildx build . \
 		--platform linux/arm/v7,linux/arm64,linux/amd64 \
-		-t fosrl/olm:latest \
-		-t fosrl/olm:$(tag) \
+		-t causq-networks/praxis-olm:latest \
+		-t causq-networks/praxis-olm:$(tag) \
 		-f Dockerfile \
 		--push
 
 docker-build-dev:
 	docker buildx build . \
 		--platform linux/arm/v7,linux/arm64,linux/amd64 \
-		-t fosrl/olm:latest \
+		-t causq-networks/praxis-olm:latest \
 		-f Dockerfile
 
 .PHONY: go-build-release \

@@ -17,20 +17,20 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fosrl/newt/bind"
-	"github.com/fosrl/newt/clients/permissions"
-	"github.com/fosrl/newt/exitnode"
-	"github.com/fosrl/newt/holepunch"
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/newt/network"
-	"github.com/fosrl/newt/util"
-	"github.com/fosrl/olm/api"
-	olmDevice "github.com/fosrl/olm/device"
-	"github.com/fosrl/olm/dns"
-	dnsOverride "github.com/fosrl/olm/dns/override"
-	"github.com/fosrl/olm/peers"
-	"github.com/fosrl/olm/subnetrouter"
-	"github.com/fosrl/olm/websocket"
+	"github.com/CausQ-Networks/praxis-newt/bind"
+	"github.com/CausQ-Networks/praxis-newt/clients/permissions"
+	"github.com/CausQ-Networks/praxis-newt/exitnode"
+	"github.com/CausQ-Networks/praxis-newt/holepunch"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/network"
+	"github.com/CausQ-Networks/praxis-newt/util"
+	"github.com/CausQ-Networks/praxis-olm/api"
+	olmDevice "github.com/CausQ-Networks/praxis-olm/device"
+	"github.com/CausQ-Networks/praxis-olm/dns"
+	dnsOverride "github.com/CausQ-Networks/praxis-olm/dns/override"
+	"github.com/CausQ-Networks/praxis-olm/peers"
+	"github.com/CausQ-Networks/praxis-olm/subnetrouter"
+	"github.com/CausQ-Networks/praxis-olm/websocket"
 	"golang.zx2c4.com/wireguard/device"
 	"golang.zx2c4.com/wireguard/tun"
 	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
@@ -93,7 +93,7 @@ type Olm struct {
 	dnsBypassEndpoints map[string]bool
 	dnsBypassMu        sync.Mutex
 
-	// controlBypassEndpoints tracks the Pangolin server (control-plane) IPs
+	// controlBypassEndpoints tracks the Praxis server (control-plane) IPs
 	// currently registered as gateway bypass targets: every IPv4 address the
 	// server host resolved to on the websocket client's most recent dial (see
 	// websocket.Client.OnDialTargets). Replaced on every dial, before any
@@ -174,7 +174,7 @@ func (o *Olm) getPeerManager() *peers.PeerManager {
 // its own bind by using "udp4" explicitly; do the same here for the initial
 // bind so olm doesn't need a second VPN active to hit it. This does mean
 // Windows can't reach an IPv6-only exit node/site, same trade-off
-// RebindSocket already made. See https://github.com/fosrl/olm/issues/134.
+// RebindSocket already made. See https://github.com/CausQ-Networks/praxis-olm/issues/134.
 func sharedBindNetwork() string {
 	if runtime.GOOS == "windows" {
 		return "udp4"
@@ -226,7 +226,7 @@ func (o *Olm) initTunnelInfo(clientID string) error {
 
 	// A user-disabled hole punch must fully suppress outbound hole punch
 	// packets, not just change what's reported to the server as "relay" (see
-	// SetEnabled's doc comment and https://github.com/fosrl/olm/issues/134).
+	// SetEnabled's doc comment and https://github.com/CausQ-Networks/praxis-olm/issues/134).
 	o.holePunchManager.SetEnabled(o.tunnelConfig.Holepunch)
 
 	return nil

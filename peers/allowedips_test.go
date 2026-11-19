@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/fosrl/newt/network"
+	"github.com/CausQ-Networks/praxis-newt/network"
 	"golang.zx2c4.com/wireguard/conn"
 	"golang.zx2c4.com/wireguard/device"
 	"golang.zx2c4.com/wireguard/tun/tuntest"

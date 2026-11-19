@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get Olm - Cross-platform installation script
-# Usage: curl -fsSL https://raw.githubusercontent.com/fosrl/olm/refs/heads/main/get-olm.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/causq-networks/praxis-olm/refs/heads/main/get-olm.sh | bash
 
 set -e
 
@@ -12,7 +12,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # GitHub repository info
-REPO="fosrl/olm"
+REPO="causq-networks/praxis-olm"
 GITHUB_API_URL="https://api.github.com/repos/${REPO}/releases/latest"
 
 # Function to print colored output

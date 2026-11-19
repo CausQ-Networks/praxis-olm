@@ -8,7 +8,7 @@ import (
 	"net"
 
 	"github.com/Microsoft/go-winio"
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 )
 
 // createSocketListener creates a Windows named pipe listener

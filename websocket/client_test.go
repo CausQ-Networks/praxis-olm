@@ -78,7 +78,7 @@ func TestClearConnIfCurrentIgnoresStaleConnection(t *testing.T) {
 }
 
 // TestReconnectIgnoresStaleConnection is the direct regression test for
-// fosrl/olm#139: the read pump and sendPing can both react to the same dead
+// causq-networks/praxis-olm#139: the read pump and sendPing can both react to the same dead
 // connection and call reconnect() independently. Once one of them has
 // already replaced c.conn with a newer connection, the other's reconnect
 // call (carrying the old, now-stale connection) must be a no-op rather than

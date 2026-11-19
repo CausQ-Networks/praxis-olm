@@ -7,12 +7,12 @@ import (
 	"net/netip"
 	"strings"
 
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/newt/network"
-	"github.com/fosrl/newt/util"
-	olmDevice "github.com/fosrl/olm/device"
-	"github.com/fosrl/olm/peers"
-	"github.com/fosrl/olm/websocket"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/network"
+	"github.com/CausQ-Networks/praxis-newt/util"
+	olmDevice "github.com/CausQ-Networks/praxis-olm/device"
+	"github.com/CausQ-Networks/praxis-olm/peers"
+	"github.com/CausQ-Networks/praxis-olm/websocket"
 )
 
 // exitNodeAliasSiteId is the sentinel siteId used when registering exit node

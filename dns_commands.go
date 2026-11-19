@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/fosrl/newt/logger"
-	dnsOverride "github.com/fosrl/olm/dns/override"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	dnsOverride "github.com/CausQ-Networks/praxis-olm/dns/override"
 )
 
 const (

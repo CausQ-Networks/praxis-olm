@@ -15,7 +15,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 	"golang.org/x/sys/windows/svc"
 	"golang.org/x/sys/windows/svc/debug"
 	"golang.org/x/sys/windows/svc/eventlog"

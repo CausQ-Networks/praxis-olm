@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/fosrl/newt/holepunch"
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/olm/peers"
-	"github.com/fosrl/olm/websocket"
+	"github.com/CausQ-Networks/praxis-newt/holepunch"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-olm/peers"
+	"github.com/CausQ-Networks/praxis-olm/websocket"
 )
 
 func (o *Olm) handleWgPeerAddData(msg websocket.WSMessage) {

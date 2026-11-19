@@ -9,8 +9,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/fosrl/newt/bind"
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/bind"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 	"golang.zx2c4.com/wireguard/tun"
 )
 

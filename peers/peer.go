@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/newt/util"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/util"
 	"golang.zx2c4.com/wireguard/device"
 	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 )

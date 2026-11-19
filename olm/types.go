@@ -3,7 +3,7 @@ package olm
 import (
 	"time"
 
-	"github.com/fosrl/olm/peers"
+	"github.com/CausQ-Networks/praxis-olm/peers"
 )
 
 type WgData struct {
@@ -84,7 +84,7 @@ type OlmConfig struct {
 	SocketPath string
 	Version    string // version of the agent (the app embedding olm)
 	Agent      string
-	// OlmVersion is the version of the github.com/fosrl/olm module itself.
+	// OlmVersion is the version of the github.com/CausQ-Networks/praxis-olm module itself.
 	// Optional: when empty it is read from the binary's build info.
 	OlmVersion string
 

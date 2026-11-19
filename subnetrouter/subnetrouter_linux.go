@@ -1,7 +1,7 @@
 //go:build linux
 
 // Package subnetrouter lets this client forward LAN traffic out over its own
-// WireGuard tunnel, source-NAT'd to the tunnel's own IP. Pangolin's
+// WireGuard tunnel, source-NAT'd to the tunnel's own IP. Praxis's
 // server-side routing/ACLs are keyed on the client's tunnel IP as its
 // identity, so traffic merely forwarded from the LAN (which arrives with the
 // LAN device's own source address) would not be recognized - it must be
@@ -17,7 +17,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 	"github.com/google/nftables"
 	"github.com/google/nftables/expr"
 	"golang.org/x/sys/unix"

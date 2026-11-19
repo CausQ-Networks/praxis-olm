@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/olm/peers"
-	"github.com/fosrl/olm/websocket"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-olm/peers"
+	"github.com/CausQ-Networks/praxis-olm/websocket"
 )
 
 // GatewaySitesUpdateData is the payload of the server's
@@ -274,7 +274,7 @@ func (o *Olm) flushPendingDNSBypassEndpoints() {
 }
 
 // updateControlBypassEndpoints is the websocket client's OnDialTargets
-// callback: ips are every address the Pangolin server host resolved to,
+// callback: ips are every address the Praxis server host resolved to,
 // about to be dialed for the token request or websocket. It diffs them
 // against the currently-registered set and adds/removes gateway bypass routes
 // for the difference, via the same AddGatewayBypassEndpoint machinery used

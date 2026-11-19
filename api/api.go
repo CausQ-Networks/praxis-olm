@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/newt/network"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/network"
 )
 
 // ConnectionRequest defines the structure for an incoming connection request.

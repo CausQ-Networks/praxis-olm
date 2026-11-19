@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	platform "github.com/fosrl/olm/dns/platform"
+	platform "github.com/CausQ-Networks/praxis-olm/dns/platform"
 )
 
 // readSystemDNS returns the current system DNS servers in "host:53" format.

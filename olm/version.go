@@ -6,8 +6,8 @@ import (
 )
 
 // olmModulePath is the module path of this package, used to find its version
-// in the build info of a binary that embeds olm (the CLI, Pangolin Windows, ...).
-const olmModulePath = "github.com/fosrl/olm"
+// in the build info of a binary that embeds olm (the CLI, Praxis Windows, ...).
+const olmModulePath = "github.com/CausQ-Networks/praxis-olm"
 
 // resolveOlmVersion returns the version of the olm module this binary was
 // built with, as opposed to config.Version which is the embedding agent's

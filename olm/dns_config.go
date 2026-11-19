@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/newt/network"
-	dnsOverride "github.com/fosrl/olm/dns/override"
-	"github.com/fosrl/olm/websocket"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/network"
+	dnsOverride "github.com/CausQ-Networks/praxis-olm/dns/override"
+	"github.com/CausQ-Networks/praxis-olm/websocket"
 )
 
 // applyDNSConfigUpdate merges a server-provided DNS config override into the

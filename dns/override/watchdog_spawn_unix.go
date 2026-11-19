@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"syscall"
 
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 )
 
 // SpawnWatchdogConfig captures the inputs needed to launch the external
@@ -46,7 +46,7 @@ type SpawnWatchdogConfig struct {
 //	<Executable> <Subcommand...> --parent-pid=<ppid> \
 //	    --interface=<InterfaceName> [--socket=<SocketPath>]
 //
-// Both pangolin (cli) and olm should map their watchdog subcommand to
+// Both praxis (cli) and olm should map their watchdog subcommand to
 // RunWatchdog.
 func SpawnWatchdog(cfg SpawnWatchdogConfig) (*exec.Cmd, error) {
 	if cfg.Executable == "" {

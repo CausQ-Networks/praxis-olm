@@ -1,7 +1,7 @@
 package olm
 
 import (
-	"github.com/fosrl/olm/peers"
+	"github.com/CausQ-Networks/praxis-olm/peers"
 )
 
 // slicesEqual compares two string slices for equality (order-independent)

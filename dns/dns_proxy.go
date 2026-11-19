@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/newt/util"
-	"github.com/fosrl/olm/device"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/util"
+	"github.com/CausQ-Networks/praxis-olm/device"
 	"github.com/miekg/dns"
 	"gvisor.dev/gvisor/pkg/buffer"
 	"gvisor.dev/gvisor/pkg/tcpip"
@@ -581,7 +581,7 @@ func (p *DNSProxy) getLocalDNS() []string {
 // forwardToLocalDNS forwards a DNS query directly to the host's own system DNS
 // servers (localDNS), always using host networking regardless of tunnelDNS -
 // these queries are for domains the caller has explicitly excluded from
-// Pangolin resolution, so they should never traverse the tunnel.
+// Praxis resolution, so they should never traverse the tunnel.
 func (p *DNSProxy) forwardToLocalDNS(query *dns.Msg) *dns.Msg {
 	servers := p.getLocalDNS()
 	if len(servers) == 0 {

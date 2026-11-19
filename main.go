@@ -8,9 +8,9 @@ import (
 	"runtime"
 	"syscall"
 
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/newt/updates"
-	olmpkg "github.com/fosrl/olm/olm"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/updates"
+	olmpkg "github.com/CausQ-Networks/praxis-olm/olm"
 )
 
 var olmVersion = "version_replaceme"

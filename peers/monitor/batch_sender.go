@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/olm/websocket"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-olm/websocket"
 )
 
 // Batch tuning: each new item added resets a batchDebounce trailing window, so a burst of

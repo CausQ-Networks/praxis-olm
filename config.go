@@ -207,7 +207,7 @@ func loadConfigFromFile() (*OlmConfig, error) {
 
 // loadConfigFromEnv loads configuration from environment variables
 func loadConfigFromEnv(config *OlmConfig) {
-	if val := os.Getenv("PANGOLIN_ENDPOINT"); val != "" {
+	if val := func() string { if v := os.Getenv("PRAXIS_ENDPOINT"); v != "" { return v }; return os.Getenv("PANGOLIN_ENDPOINT") }(); val != "" {
 		config.Endpoint = val
 		config.sources["endpoint"] = string(SourceEnv)
 	}
@@ -342,7 +342,7 @@ func loadConfigFromCLI(config *OlmConfig, args []string) (bool, bool, error) {
 	}
 
 	// Define flags
-	serviceFlags.StringVar(&config.Endpoint, "endpoint", config.Endpoint, "Endpoint of your Pangolin server")
+	serviceFlags.StringVar(&config.Endpoint, "endpoint", config.Endpoint, "Endpoint of your Praxis server")
 	serviceFlags.StringVar(&config.ID, "id", config.ID, "Olm ID")
 	serviceFlags.StringVar(&config.Secret, "secret", config.Secret, "Olm secret")
 	serviceFlags.StringVar(&config.OrgID, "org", config.OrgID, "Organization ID")
@@ -361,10 +361,10 @@ func loadConfigFromCLI(config *OlmConfig, args []string) (bool, bool, error) {
 	serviceFlags.StringVar(&config.PingTimeout, "ping-timeout", config.PingTimeout, "Timeout for each ping")
 	serviceFlags.BoolVar(&config.EnableAPI, "enable-api", config.EnableAPI, "Enable API server for receiving connection requests")
 	serviceFlags.BoolVar(&config.DisableHolepunch, "disable-holepunch", config.DisableHolepunch, "Disable hole punching")
-	serviceFlags.BoolVar(&config.OverrideDNS, "override-dns", config.OverrideDNS, "When enabled, the client uses custom DNS servers to resolve internal resources and aliases. This overrides your system's default DNS settings. Queries that cannot be resolved as a Pangolin resource will be forwarded to your configured Upstream DNS Server. (default false)")
+	serviceFlags.BoolVar(&config.OverrideDNS, "override-dns", config.OverrideDNS, "When enabled, the client uses custom DNS servers to resolve internal resources and aliases. This overrides your system's default DNS settings. Queries that cannot be resolved as a Praxis resource will be forwarded to your configured Upstream DNS Server. (default false)")
 	serviceFlags.BoolVar(&config.DisableRelay, "disable-relay", config.DisableRelay, "Disable relay connections")
 	serviceFlags.BoolVar(&config.PreferLocalRoutes, "prefer-local-routes", config.PreferLocalRoutes, "Add tunnel routes with a high metric so overlapping local/connected routes take precedence (default false)")
-	serviceFlags.BoolVar(&config.TunnelDNS, "tunnel-dns", config.TunnelDNS, "When enabled, DNS queries are routed through the tunnel for remote resolution. To ensure queries are tunneled correctly, you must define the DNS server as a Pangolin resource and enter its address as an Upstream DNS Server. (default false)")
+	serviceFlags.BoolVar(&config.TunnelDNS, "tunnel-dns", config.TunnelDNS, "When enabled, DNS queries are routed through the tunnel for remote resolution. To ensure queries are tunneled correctly, you must define the DNS server as a Praxis resource and enter its address as an Upstream DNS Server. (default false)")
 	serviceFlags.BoolVar(&config.SubnetRouter, "subnet-router", config.SubnetRouter, "Enable this client to act as a subnet router: traffic forwarded from the local network is NATed to this client's own tunnel IP before going out over the tunnel. Linux only, requires CAP_NET_ADMIN. (default false)")
 	serviceFlags.BoolVar(&config.DisableRoutesAndAliasesOnExitNode, "disable-routes-and-aliases", config.DisableRoutesAndAliasesOnExitNode, "Make the exit node take precedence over individual resources: while an exit node is connected, remove routes/aliases for site resources, restoring them once it disconnects. Gateway routes are still added. (default false)")
 	// serviceFlags.BoolVar(&config.DoNotCreateNewClient, "do-not-create-new-client", config.DoNotCreateNewClient, "Do not create new client")

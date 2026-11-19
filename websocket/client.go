@@ -20,8 +20,8 @@ import (
 
 	"software.sslmate.com/src/go-pkcs12"
 
-	"github.com/fosrl/newt/logger"
-	"github.com/fosrl/newt/util"
+	"github.com/CausQ-Networks/praxis-newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/util"
 	"github.com/gorilla/websocket"
 )
 

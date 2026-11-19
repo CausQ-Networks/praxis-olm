@@ -15,7 +15,7 @@ body:
           description: Please fill out the relevant details below for your environment.
           value: |
               - OS Type & Version:
-              - Pangolin Version:
+              - Praxis Version:
               - Edition (Community or Enterprise):
               - Gerbil Version:
               - Traefik Version:

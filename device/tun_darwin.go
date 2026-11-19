@@ -6,7 +6,7 @@ import (
 	"net"
 	"os"
 
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 	"golang.org/x/sys/unix"
 	"golang.zx2c4.com/wireguard/ipc"
 	"golang.zx2c4.com/wireguard/tun"

@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/fosrl/newt/logger"
+	"github.com/CausQ-Networks/praxis-newt/logger"
 )
 
 const defaultResolvConfPath = "/etc/resolv.conf"

@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// minBatchedSiteMessagesVersion is the first pangolin server version that understands the
+// minBatchedSiteMessagesVersion is the first praxis server version that understands the
 // batched siteIds/chainIds (and endpoints/relayEndpoints) form of the olm/wg/relay,
 // olm/wg/unrelay, olm/wg/local and olm/wg/unlocal messages. Servers older than this only
 // understand the singular siteId/chainId form, so olm must fall back to sending those

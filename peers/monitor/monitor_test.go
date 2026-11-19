@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/fosrl/newt/bind"
+	"github.com/CausQ-Networks/praxis-newt/bind"
 	wgConn "golang.zx2c4.com/wireguard/conn"
 )
 
