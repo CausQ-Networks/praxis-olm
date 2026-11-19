@@ -1,5 +1,7 @@
 # Olm
 
+[![Discord](https://img.shields.io/discord/1572896060949659679?logo=discord&style=flat-square&label=Discord)](https://praxis.causq.com/discord/)
+
 > [!NOTE]
 > Olm is being phased out in favor of the [Praxis CLI](https://github.com/CausQ-Networks/praxis-cli) and is only meant for advanced use cases.
 
